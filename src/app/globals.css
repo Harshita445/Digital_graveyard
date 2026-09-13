@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: #fdfbf7;
+  --color-paper-dark: #f4efe6;
+  --color-paper-bg: #ede9df;
+  --color-ink: #111111;
+  --color-ink-border: #141414;
+}
+
+body {
+  background-color: var(--color-paper-bg);
+  color: var(--color-ink);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.font-hand {
+  font-family: 'Patrick Hand', 'Architects Daughter', cursive;
+}
+
+/* Hand-drawn organic border styling */
+.sketch-border-outer {
+  border: 3.5px solid var(--color-ink-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+.sketch-card {
+  border: 2px solid var(--color-ink-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  background-color: var(--color-paper);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sketch-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 4px 0px var(--color-ink-border);
+}
+
+.sketch-card-static {
+  border: 2px solid var(--color-ink-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  background-color: var(--color-paper);
+}
+
+.sketch-headstone {
+  border: 2.5px solid var(--color-ink-border);
+  border-radius: 120px 120px 15px 15px / 120px 120px 15px 15px;
+  background-color: var(--color-paper);
+}
+
+.sketch-btn {
+  border: 2px solid var(--color-ink-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 2px 3px 0px var(--color-ink-border);
+  background-color: var(--color-paper);
+  transition: all 0.15s ease-in-out;
+}
+
+.sketch-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--color-ink-border);
+  background-color: var(--color-paper-dark);
+}
+
+.sketch-btn-primary {
+  border: 2px solid var(--color-ink-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 2px 3px 0px var(--color-ink-border);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  transition: all 0.15s ease-in-out;
+}
+
+.sketch-btn-primary:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--color-ink-border);
+  background-color: #2a2a2a;
+}
+
+.sketch-input {
+  border: 2px solid var(--color-ink-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  background-color: transparent;
+}
+
+.sketch-tag {
+  border: 1.5px solid var(--color-ink-border);
+  border-radius: 200px 10px 180px 12px / 10px 190px 12px 180px;
+  background-color: transparent;
+}
+
+.sketch-divider {
+  position: relative;
+  height: 3px;
+  background: var(--color-ink-border);
+  border-radius: 30% 70% 60% 40% / 50% 60% 40% 50%;
+}
+
+/* Organic torn corner SVG detail */
+.crack-corner {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.85;
+  pointer-events: none;
+}
